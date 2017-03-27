@@ -102,7 +102,7 @@ class Route extends React.Component {
 
     return (
       component ? ( // component prop gets first priority, only called if there's a match
-        match ? React.createElement(component, props) : null
+        match ? React.createElement(component, ({...props, hidden: false})) : React.createElement(component, ({...props, hidden: true}))
       ) : render ? ( // render prop is next, only called if there's a match
         match ? render(props) : null
       ) : children ? ( // children come last, always called
