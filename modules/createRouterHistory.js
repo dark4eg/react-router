@@ -6,6 +6,7 @@ const canUseDOM = !!(
 
 export default function (createHistory) {
   let history
+    alert('go-go')
   if (canUseDOM)
     history = useRouterHistory(createHistory)()
   return history
