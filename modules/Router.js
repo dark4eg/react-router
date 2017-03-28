@@ -134,6 +134,7 @@ const Router = React.createClass({
     // the only ones that might be custom routing context props.
     Object.keys(Router.propTypes).forEach(propType => delete props[propType])
 
+    console.log('render router')
     return render({
       ...props,
       router: this.router,
