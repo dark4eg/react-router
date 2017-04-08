@@ -100,8 +100,6 @@ class Route extends React.Component {
     const location = this.props.location || route.location
     const props = { match, location, history, staticContext }
 
-    const t = null
-
     return (
       component ? ( // component prop gets first priority, only called if there's a match
         match ? React.createElement(component, ({...props, hidden: false})) : React.createElement(component, ({...props, hidden: true}))
